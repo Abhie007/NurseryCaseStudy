@@ -119,7 +119,10 @@ namespace NurseryCaseStudy.Controllers
                         return BadRequest("Some Items are Out of Stock");
                     }
                     plant.quantity = plant.quantity - item.quantity;
+                    //since it is purchase.. cart should go empty
+                    cart.Remove(item);
                 }
+
 
 
 
